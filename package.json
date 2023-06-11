@@ -1,0 +1,7 @@
+{
+  "scripts": {
+    "install:api": "cd api && npm i",
+    "start:api": "cd api && npm start",
+    "start:web": "cd web && npm start"
+  }
+}

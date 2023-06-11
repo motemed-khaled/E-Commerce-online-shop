@@ -1,0 +1,53 @@
+#dropLogin{
+    background-color: #fff;
+    top: 102%;
+    right: 0;
+    padding: 10px;
+    z-index: 9999;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid #ffc107;
+    border-top: none;
+}
+ #dropLogin a{
+    cursor: pointer;
+    display: block;
+    padding: 10px 50px;
+    color: #3D464D;
+    text-decoration: none;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+#dropLogin a:first-of-type{
+    padding-top: 0;
+}
+#dropLogin a:hover{
+    color:#ffc107 ;
+}
+
+#dropLogin h6{
+    color: #3D464D;
+}
+#dropLogin button{
+    border: none;
+    padding: 10px 20px;
+    border: 2px solid #ffc107;
+    background-color: #ffc107;
+    color: #3D464D;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto 0;
+    outline: none;
+    transition: 0.4s;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -ms-transition: 0.4s;
+    -o-transition: 0.4s;
+}
+#dropLogin button:hover{
+    background-color: #3D464D;
+    color: #ffc107;
+}
