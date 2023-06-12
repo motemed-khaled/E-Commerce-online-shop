@@ -255,7 +255,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
       <span class="bg-secondary pr-3">Categories</span>
     </h2>
-    <div class="row px-xl-5 pb-3">
+    <div class="row px-xl-5 pb-3" id="section_categories" >
       <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
         <a class="text-decoration-none" href="">
           <div class="cat-item d-flex align-items-center mb-4">
@@ -427,8 +427,7 @@
           <div class="product-img position-relative overflow-hidden">
             <img class="img-fluid w-100" src="img/product-1.jpg" alt="" />
             <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href="#"
-                onclick="addSingleProductToCart({id:1,name:'product-1',price:123,image:'/img/product-1.jpg'})"><i
+              <a class="btn btn-outline-dark btn-square" href="#"><i
                   class="fa fa-shopping-cart"></i></a>
               <a class="btn btn-outline-dark btn-square" href="#"><i class="far fa-heart"></i></a>
               <a class="btn btn-outline-dark btn-square" href="#"><i class="fa fa-sync-alt"></i></a>
@@ -457,8 +456,7 @@
           <div class="product-img position-relative overflow-hidden">
             <img class="img-fluid w-100" src="img/product-2.jpg" alt="" />
             <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href="#"
-                onclick="addSingleProductToCart({id:2,name:'product-2',price:140,image:'/img/product-2.jpg'})"><i
+              <a class="btn btn-outline-dark btn-square" href="#"><i
                   class="fa fa-shopping-cart"></i></a>
               <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
               <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
@@ -487,8 +485,7 @@
           <div class="product-img position-relative overflow-hidden">
             <img class="img-fluid w-100" src="img/product-3.jpg" alt="" />
             <div class="product-action">
-              <a class="btn btn-outline-dark btn-square" href="#"
-                onclick="addSingleProductToCart({id:3,name:'product-3',price:150,image:'/img/product-3.jpg'})"><i
+              <a class="btn btn-outline-dark btn-square" href="#"><i
                   class="fa fa-shopping-cart"></i></a>
               <a class="btn btn-outline-dark btn-square" href=""><i class="far fa-heart"></i></a>
               <a class="btn btn-outline-dark btn-square" href=""><i class="fa fa-sync-alt"></i></a>
@@ -688,7 +685,7 @@
     <h2 class="section-title position-relative text-uppercase mx-xl-5 mb-4">
       <span class="bg-secondary pr-3">Recent Products</span>
     </h2>
-    <div class="row px-xl-5">
+    <div id="recentProducts" class="row px-xl-5">
       <div class="col-lg-3 col-md-4 col-sm-6 pb-1">
         <div class="product-item bg-light mb-4">
           <div class="product-img position-relative overflow-hidden">
@@ -912,7 +909,7 @@
             </div>
           </div>
         </div>
-      </div>
+      </div> 
     </div>
   </div>
   <!-- Products End -->
@@ -1044,6 +1041,10 @@
 
   <!-- Template Javascript -->
   <script src="js/main.js" type="module"></script>
+  <script src="js/Home/home.js" type="module"></script>
+  <script src="./js/cart/cart.js" type="module"></script>
+
+  
 </body>
 
 </html>

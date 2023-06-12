@@ -47,8 +47,8 @@ export class Checkout {
         try {
             const res = await fetchData(endpoints.createOrder.url, endpoints.createOrder.method, body);
             console.log(res)
-            // localStorage.setItem(user_id, "[]");
-            // window.location.href = "checkout.html";
+            localStorage.setItem(user_id, "[]");
+            window.location.href = "checkout.html";
         }catch (error) {
             console.log(error);
           }
