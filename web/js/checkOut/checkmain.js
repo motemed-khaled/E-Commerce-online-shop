@@ -1,5 +1,6 @@
 import { Checkout } from './check';
-import {isLogged, userContext} from '../user/userContext'
+import { isLogged, userContext } from '../user/userContext'
+import {countCartLength} from '../cart/cart'
 
 let checkedRadio = document.querySelectorAll("input[type='radio'][name='payment']");
 let sendButton = document.getElementById("sendRequest");
@@ -23,32 +24,12 @@ let cartSpan = document.querySelector(".cartspan");
 
 if (isLogged()) {
 
-    let orderData = JSON.parse(localStorage.getItem(userContext.user_id)) || [];
+    let uniqueData = JSON.parse(localStorage.getItem(userContext.user_id)) || [];
     let favNum = JSON.parse(localStorage.getItem(`${userContext.user_id}heart`)) || [];
 
     // upfate navIcon
     heartSpan.innerText = favNum.length;
-    cartSpan.innerText = orderData.length;
-
-
-    const updateOrderCount = (data) => {
-        let updateCount = [];
-        let orderName = [];
-        for (let i = 0; i < data.length; i++) {
-            let newData = data.filter(order => order.name === data[i].name)
-            newData[0].quantity = newData.length;
-            if (updateCount.length == 0) {
-                updateCount.push(newData[0]);
-            } else {
-                updateCount.forEach(order => orderName.push(order.name));
-                if (!orderName.includes(newData[0].name)) {
-                    updateCount.push(newData[0]);
-                }
-            }
-        }
-        return updateCount;
-    }
-    let uniqueData = updateOrderCount(orderData);
+    cartSpan.innerText = countCartLength(uniqueData);
 
     uniqueData.forEach(order => new Checkout(order).renderHtmlContent());
 
@@ -66,7 +47,7 @@ if (isLogged()) {
     sendButton.addEventListener("click", (e) => {
         if (firstName.value == "" || lastName.value == "" || userMail.value == "") {
             submitForm.click();
-        } else if (orderData.length != 0) {
+        } else if (uniqueData.length != 0) {
             let userValue = {
                 first_name: firstName.value,
                 last_name: lastName.value,

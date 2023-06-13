@@ -11,14 +11,16 @@ const handleProductsHTMLElements = products => {
     products.map(product => new Product(product).getCardHTMLElement()).join('') +
     Product.getHTMLPagination();
 };
+
 try {
   Product.generateFilters();
   const res = await fetchData(
     endpoints.getProducts.url + Product.getPginationQuery(),
     endpoints.getProducts.method
   );
-  Product.filters.count = res.count;
-  handleProductsHTMLElements(res.data);
+  Product.filters.count = res.data.length
+  const data = Product.addFilterAndPagination(res.data)
+  handleProductsHTMLElements(data);
 } catch (error) {
   console.log(error);
 }

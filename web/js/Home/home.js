@@ -15,7 +15,6 @@ try {
     let Category=new Categories(res.data[i]);
     if(Category.category.name!==undefined){
       data = data + Category.getHtmlMainCactegories();
-      console.log(data)
     Category.writeHtmlMainCactegories(data);
     }
     }

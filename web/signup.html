@@ -5,17 +5,29 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Signup page</title>
 </head>
 
 <body>
-  <form>
-    <input type="text" class="first-signup-input" placeholder="first name"><br />
-    <input type="text" class="last-signup-input" placeholder="last name"><br />
-    <input type="email" class="email-signup-input" placeholder="email"><br />
-    <input type="password" class="pwd-signup-input" placeholder="password"><br />
-    <button type="submit" class="signup-btn">signup</button>
-  </form>
+
+  <div class="w-100 d-flex justify-content-center align-items-center " style="height: 100vh;">
+    <div class="w-50 h-50 d-flex justify-content-center align-items-center rounded bg-dark bg-opacity-10 pe-3 ps-3" style=" min-width: 450px; min-height: 450px;">
+      <form class="text-center w-75 " style="height: fit-content; max-width: 600px; min-width: 410px;"> 
+        <input type="text" class="form-control border-bottom border-warning-subtle border-2 mb-3 shadow-none first-signup-input" placeholder="first name">
+        <input type="text" class="form-control border-bottom border-warning-subtle border-2 mb-3 shadow-none last-signup-input" placeholder="last name">
+        <input type="email" class="form-control border-bottom border-warning-subtle border-2 mb-3 shadow-none email-signup-input" placeholder="email">
+        <input type="password" class="form-control border-bottom border-warning-subtle border-2 mb-3 shadow-none pwd-signup-input" placeholder="password">
+        <p class="alert alert-danger mb-3 p-2 text-start d-none" role="alert" id="validation-alert"></p>
+  
+        <p>Have an account? <a href="signin.html" class="text-decoration-none text-danger">Signin</a></p>
+        <button type="submit" class="btn btn-primary login-btn pe-5 ps-5 mt-3 bg-warning border-0 signup-btn">signup</button>
+        
+      </form>
+    </div>
+  </div>
+
+
 
   <script src="js/user/signup.js" type="module"></script>
 </body>

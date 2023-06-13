@@ -5,15 +5,23 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <title>Login page</title>
 </head>
 
 <body>
-  <form>
-    <input type="email" class="email-signin-input" placeholder="email"><br />
-    <input type="password" class="pwd-signin-input" placeholder="password"><br />
-    <button type="submit" class="login-btn">login</button>
-  </form>
+  <div class="w-100 d-flex justify-content-center align-items-center " style="height: 100vh;">
+    <div class="w-50 h-50 d-flex justify-content-center align-items-center rounded bg-dark bg-opacity-10 pe-3 ps-3" style=" min-width: 400px; min-height: 350px;">
+      <form class="text-center w-75 " style="height: fit-content; max-width: 600px; min-width: 310px;"> 
+        <input type="email" class="form-control border-bottom border-warning-subtle border-2 mb-3 shadow-none email-signin-input" placeholder="email">
+        <input type="password" class="form-control border-bottom border-warning-subtle border-2 mb-3 shadow-none pwd-signin-input" placeholder="password">
+        <p class="alert alert-danger mb-3 p-2 text-start d-none" role="alert" id="validation-alert"></p>
+  
+        <p>Don't have an account? <a href="signup.html" class="text-decoration-none text-danger">Signup</a></p>
+        <button type="submit" class="btn btn-primary login-btn pe-5 ps-5 mt-3 bg-warning border-0 login-btn">login</button>
+      </form>
+    </div>
+  </div>
 
   <script src="js/user/signin.js" type="module"></script>
 </body>

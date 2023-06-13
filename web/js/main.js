@@ -123,18 +123,4 @@ document.addEventListener("click", e => {
     }
 })
 
-if (isLogged()) {
-// update nav icon
-
-let heartSpan = document.querySelector(".heartspan");
-let cartSpan = document.querySelector(".cartspan");
-    
-let orderData = JSON.parse(localStorage.getItem(userContext.user_id)) || [];
-let favNum = JSON.parse(localStorage.getItem(`${userContext.user_id}heart`)) || [];
-
-// upfate navIcon
-heartSpan.innerText = favNum.length;
-cartSpan.innerText = orderData.length;
-
-}
 
